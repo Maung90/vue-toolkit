@@ -1,0 +1,11 @@
+{
+  "scope": "source.vue",
+  "completions": [
+    { "trigger": "v-if", "contents": "v-if=\"${1:condition}\"" },
+    { "trigger": "v-for", "contents": "v-for=\"${1:item} in ${2:items}\"" },
+    { "trigger": "v-model", "contents": "v-model=\"${1:variable}\"" },
+    { "trigger": "v-bind", "contents": "v-bind:${1:prop}=\"${2:value}\"" },
+    { "trigger": "v-on", "contents": "v-on:${1:event}=\"${2:handler}\"" },
+    { "trigger": "v-show", "contents": "v-show=\"${1:visible}\"" }
+  ]
+}

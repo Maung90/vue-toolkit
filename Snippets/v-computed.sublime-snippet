@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+import { computed } from 'vue';
+
+const ${1:computedName} = computed(() => {
+    return ${0};
+});
+]]></content>
+    <tabTrigger>v-computed</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Create a Computed Property</description>
+</snippet>

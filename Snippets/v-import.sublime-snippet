@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+import ${1:ComponentName} from '${2:@/components}/${1:ComponentName}.vue';
+]]></content>
+    <tabTrigger>v-import</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Import a Vue Component</description>
+</snippet>

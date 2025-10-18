@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+const props = defineProps({
+    ${1:propName}: {
+        type: ${2:String},
+        required: ${3:true},
+        default: '${4:}'
+    }
+});
+]]></content>
+    <tabTrigger>v-props</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Define Component Props</description>
+</snippet>

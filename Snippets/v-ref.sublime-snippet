@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+import { ref } from 'vue';
+
+const ${1:variableName} = ref(${2:initialValue});
+]]></content>
+    <tabTrigger>v-ref</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Create a Reactive State (ref)</description>
+</snippet>

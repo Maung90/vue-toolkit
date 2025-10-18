@@ -1,0 +1,9 @@
+{
+  "extensions": ["vue"],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "ensure_newline_at_eof_on_save": true,
+  "trim_trailing_white_space_on_save": true,
+  "syntax": "Packages/VueEnhancer/VueEnhancer.sublime-syntax",
+  "color_scheme": "Packages/VueEnhancer/VueEnhancer-Legacy.tmTheme"
+}

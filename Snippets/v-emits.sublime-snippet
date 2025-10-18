@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+const emit = defineEmits(['${1:eventName}']);
+
+const ${2:handleClick} = () => {
+    emit('${1:eventName}', ${3:payload});
+};
+]]></content>
+    <tabTrigger>v-emits</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Define Component Emits</description>
+</snippet>

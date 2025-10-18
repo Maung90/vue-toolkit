@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+<template>
+  <div>
+    ${1:Hello Vue}
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const message = ref('${2:Hello Vue!}')
+</script>
+
+<style scoped>
+${3:/* your styles */}
+</style>
+]]></content>
+    <tabTrigger>vuebase</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Template Dasar Vue 3</description>
+</snippet>

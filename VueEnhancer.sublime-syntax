@@ -1,0 +1,71 @@
+%YAML 1.2
+---
+name: Vue Enhancer
+file_extensions:
+  - vue
+scope: source.vue
+
+contexts:
+  main:
+    # Template Section
+    - match: '(<)(template)([^>]*)(>)'
+      scope: meta.tag.template.start.vue
+      captures:
+        1: punctuation.definition.tag.begin.html
+        2: entity.name.tag.html
+        4: punctuation.definition.tag.end.html
+      push: template_content
+
+    # Script Section
+    - match: '(<)(script)([^>]*)(>)'
+      scope: meta.tag.script.start.vue
+      captures:
+        1: punctuation.definition.tag.begin.html
+        2: entity.name.tag.html
+        4: punctuation.definition.tag.end.html
+      push: script_content
+
+    # Style Section
+    - match: '(<)(style)([^>]*)(>)'
+      scope: meta.tag.style.start.vue
+      captures:
+        1: punctuation.definition.tag.begin.html
+        2: entity.name.tag.html
+        4: punctuation.definition.tag.end.html
+      push: style_content
+
+  template_content:
+    - meta_scope: text.html.vue
+    - match: '(<)(/)(template)(>)'
+      scope: meta.tag.template.end.vue
+      captures:
+        1: punctuation.definition.tag.begin.html
+        2: punctuation.definition.tag.begin.html
+        3: entity.name.tag.html
+        4: punctuation.definition.tag.end.html
+      pop: true
+    - include: scope:text.html.basic
+
+  script_content:
+    - meta_scope: source.js.vue
+    - match: '(<)(/)(script)(>)'
+      scope: meta.tag.script.end.vue
+      captures:
+        1: punctuation.definition.tag.begin.html
+        2: punctuation.definition.tag.begin.html
+        3: entity.name.tag.html
+        4: punctuation.definition.tag.end.html
+      pop: true
+    - include: scope:source.js
+
+  style_content:
+    - meta_scope: source.css.vue
+    - match: '(<)(/)(style)(>)'
+      scope: meta.tag.style.end.vue
+      captures:
+        1: punctuation.definition.tag.begin.html
+        2: punctuation.definition.tag.begin.html
+        3: entity.name.tag.html
+        4: punctuation.definition.tag.end.html
+      pop: true
+    - include: scope:source.css
