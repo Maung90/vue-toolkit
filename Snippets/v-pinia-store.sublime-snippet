@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+import { defineStore } from 'pinia';
+
+export const use${1:StoreName}Store = defineStore('${2:storeId}', {
+  state: () => ({
+    ${3:/* properties */}
+  }),
+  getters: {
+    ${4:/* getters */}
+  },
+  actions: {
+    ${5:/* actions */}
+  },
+});
+]]></content>
+    <tabTrigger>v-pinia-store</tabTrigger>
+    <scope>source.js</scope> <description>Pinia Store Boilerplate</description>
+</snippet>

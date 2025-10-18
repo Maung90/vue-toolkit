@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+import { watch } from 'vue';
+
+watch(${1:source}, (newValue, oldValue) => {
+    ${0:/* Code to run on change */}
+});
+]]></content>
+    <tabTrigger>v-watch</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Vue Watcher</description>
+</snippet>

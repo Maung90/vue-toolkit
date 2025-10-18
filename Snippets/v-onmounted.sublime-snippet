@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    ${0:/* Code to run after component is mounted */}
+});
+]]></content>
+    <tabTrigger>v-onmounted</tabTrigger>
+    <scope>source.vue</scope>
+    <description>Vue onMounted Lifecycle Hook</description>
+</snippet>

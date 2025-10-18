@@ -1,11 +1,25 @@
 {
   "scope": "source.vue",
   "completions": [
+    // Vue Directives
     { "trigger": "v-if", "contents": "v-if=\"${1:condition}\"" },
-    { "trigger": "v-for", "contents": "v-for=\"${1:item} in ${2:items}\"" },
+    { "trigger": "v-for", "contents": "v-for=\"${1:item} in ${2:items}\" :key=\"${1:item}.id\"" },
     { "trigger": "v-model", "contents": "v-model=\"${1:variable}\"" },
-    { "trigger": "v-bind", "contents": "v-bind:${1:prop}=\"${2:value}\"" },
-    { "trigger": "v-on", "contents": "v-on:${1:event}=\"${2:handler}\"" },
-    { "trigger": "v-show", "contents": "v-show=\"${1:visible}\"" }
+    { "trigger": "v-show", "contents": "v-show=\"${1:visible}\"" },
+    { "trigger": "v-else-if", "contents": "v-else-if=\"${1:condition}\"" },
+    { "trigger": "v-else", "contents": "v-else" },
+    
+    // Shorthands
+    { "trigger": "@click", "contents": "@click=\"${1:handler}\"" },
+    { "trigger": "@submit", "contents": "@submit.prevent=\"${1:handler}\"" },
+    { "trigger": ":class", "contents": ":class=\"{ '${1:active}': ${2:isActive} }\"" },
+    { "trigger": ":style", "contents": ":style=\"{ ${1:color}: '${2:red}' }\"" },
+
+    // Common HTML Attributes
+    { "trigger": "class", "contents": "class=\"${1:name}\"" },
+    { "trigger": "id", "contents": "id=\"${1:name}\"" },
+    { "trigger": "src", "contents": "src=\"${1:path}\"" },
+    { "trigger": "href", "contents": "href=\"${1:path}\"" },
+    { "trigger": "alt", "contents": "alt=\"${1:description}\"" }
   ]
 }
