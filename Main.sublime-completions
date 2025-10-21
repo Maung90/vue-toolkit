@@ -1,25 +1,40 @@
 {
-  "scope": "source.vue",
+  "scope": "source.vue, text.html.vue",
   "completions": [
-    // Vue Directives
+    // --- Vue Directives ---
     { "trigger": "v-if", "contents": "v-if=\"${1:condition}\"" },
     { "trigger": "v-for", "contents": "v-for=\"${1:item} in ${2:items}\" :key=\"${1:item}.id\"" },
     { "trigger": "v-model", "contents": "v-model=\"${1:variable}\"" },
     { "trigger": "v-show", "contents": "v-show=\"${1:visible}\"" },
     { "trigger": "v-else-if", "contents": "v-else-if=\"${1:condition}\"" },
     { "trigger": "v-else", "contents": "v-else" },
-    
-    // Shorthands
+    { "trigger": "v-bind", "contents": "v-bind:${1:attribute}=\"${2:value}\"" },
+    { "trigger": "v-on", "contents": "v-on:${1:event}=\"${2:handler}\"" },
+    { "trigger": "v-slot", "contents": "v-slot:${1:name}=\"${2:props}\"" },
+
+    // --- Shorthands & Event Modifiers ---
     { "trigger": "@click", "contents": "@click=\"${1:handler}\"" },
-    { "trigger": "@submit", "contents": "@submit.prevent=\"${1:handler}\"" },
+    { "trigger": "@click.prevent", "contents": "@click.prevent=\"${1:handler}\"" },
+    { "trigger": "@click.stop", "contents": "@click.stop=\"${1:handler}\"" },
+    { "trigger": "@submit.prevent", "contents": "@submit.prevent=\"${1:handler}\"" },
+    { "trigger": "@input", "contents": "@input=\"${1:handler}\"" },
+    { "trigger": "@change", "contents": "@change=\"${1:handler}\"" },
+    { "trigger": "@keydown.enter", "contents": "@keydown.enter.prevent=\"${1:handler}\"" },
     { "trigger": ":class", "contents": ":class=\"{ '${1:active}': ${2:isActive} }\"" },
     { "trigger": ":style", "contents": ":style=\"{ ${1:color}: '${2:red}' }\"" },
+    
+    // --- Vue Router ---
+    { "trigger": "router-link", "contents": "<router-link to=\"/${1:path}\">${2:Link Text}</router-link>" },
+    { "trigger": "router-view", "contents": "<router-view />" },
 
-    // Common HTML Attributes
-    { "trigger": "class", "contents": "class=\"${1:name}\"" },
-    { "trigger": "id", "contents": "id=\"${1:name}\"" },
-    { "trigger": "src", "contents": "src=\"${1:path}\"" },
-    { "trigger": "href", "contents": "href=\"${1:path}\"" },
-    { "trigger": "alt", "contents": "alt=\"${1:description}\"" }
+    // --- Form Inputs ---
+    { "trigger": "input-text", "contents": "<input type=\"text\" v-model=\"${1:textValue}\" />" },
+    { "trigger": "input-check", "contents": "<input type=\"checkbox\" v-model=\"${1:checkValue}\" />" },
+    { "trigger": "input-radio", "contents": "<input type=\"radio\" v-model=\"${1:radioValue}\" value=\"${2:option}\" />" },
+    { "trigger": "input-submit", "contents": "<input type=\"submit\" value=\"${1:Submit}\" />" },
+    { "trigger": "button-submit", "contents": "<button type=\"submit\">${1:Submit}</button>" },
+
+    // --- Transitions ---
+    { "trigger": "transition", "contents": "<transition name=\"${1:fade}\">\n\t<div v-if=\"${2:show}\">\n\t\t${0}\n\t</div>\n</transition>" }
   ]
 }
